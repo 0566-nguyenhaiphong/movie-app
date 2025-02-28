@@ -11,6 +11,7 @@ const opts = {
   playerVars: {
     // https://developers.google.com/youtube/player_parameters
     autoplay: 1,
+    
   },
 };
 
@@ -34,6 +35,7 @@ const MovieProvider = ({ children }) => {
       );
 
       const data = await response.json();
+      console.log(data);
       setTrailerUrl(data.results[0]?.key);
       setIsOpen(true);
     } catch (error) {

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Modal from "react-modal"; 
 import Banner from "./components/Banner";
 import Header from "./components/Header";
 import MovieList from "./components/MovieList";
@@ -6,6 +7,7 @@ import { useState } from "react";
 import MovieSearch from "./components/MovieSearch";
 import { MovieProvider } from "./context/MovieDetailContext";
 
+Modal.setAppElement("#root");
 function App() {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
